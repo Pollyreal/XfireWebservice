@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://xfire.codehaus.org/config/1.0">
-<service xmlns="http://xfire.codehaus.org/config/1.0">
-	<name>CalculatorService</name>
-	<namespace>http://test/CalculatorService</namespace>
-	<serviceClass>com.ravindra.web.xfire.CalculatorInterface</serviceClass>
-	<implementationClass>com.ravindra.web.xfire.CalculatorImplementation</implementationClass>
-	<inHandlers>
-		<handler handlerClass ="com.ravindra.web.xfire.authentication.AuthenticationHandler" ></handler >
-	</inHandlers>
-	<style>wrapped</style>
-	<use>literal</use>
-	<scope>application</scope>
-</service>
+    <service xmlns="http://xfire.codehaus.org/config/1.0">
+        <name>CalculatorService</name>
+        <namespace>http://test/CalculatorService</namespace>
+        <serviceClass>com.ravindra.web.xfire.CalculatorInterface</serviceClass>
+        <implementationClass>com.ravindra.web.xfire.CalculatorImplementation</implementationClass>
+        <inHandlers>
+            <handler>
+                <handlerClass>com.ravindra.web.xfire.authentication.AuthenticationHandler</handlerClass>
+            </handler>
+        </inHandlers>
+        <style>wrapped</style>
+        <use>literal</use>
+        <scope>application</scope>
+    </service>
 </beans>
